@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothek</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .pi {
+            background: #feff9c;
+            color: #333;
+            padding: 15px;
+            width: fit-content;
+            margin: 20px auto;
+            transform: rotate(-2deg);
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <asdf id="bibliothek">
+            <h1>Bibliothek 📚</h1>
+            <p>Du stehst in einem riesigen Raum. Der Geruch von altem Papier liegt in der Luft.</p>
+            <img src="img/a.webp" alt="Schloss" class="small-image">
+
+            <p>Neben dem schloss klebt ein Zettel:</p>
+            <div class="pi">"zurück ins plenum"</div>
+
+            <p>
+
+                Auf dem Schloss leuchten bereits einige Zahlen:
+
+                987825 467 ...
+
+            </p>
+
+
+
+            <p>
+
+                An der Wand hängt ein altes Plakat einer Telefongesellschaft, du schaust auf dem telefon daneben und
+                plötzlich fällt dir etwas auf: Die Zahlen auf dem Telefon...
+                <br>
+                wasfür steht Plenum?
+
+            </p>
+
+            <input type="text" id="code" placeholder="Code">
+            <button class="btn" onclick="check()">Code eingeben</button>
+        </asdf>
+
+        <asdf id="harold" class="hidden">
+            <h1>Richtig</h1>
+            <p>Klick! Das Schloss entriegelt sich. Ein goldener Schlüssel liegt auf dem Sessel.</p>
+            <a class="btn" href="./direktorzimmer.html">direktorzimmer</a>
+        </asdf>
+
+        <asdf id="gameover" class="hidden">
+            <h1>Game Over</h1>
+            <p>Ein lauter Alarm schrillt! Du bist in der Bibliothek gefangen.</p>
+            <button class="btn" onclick="reset()">nochmal versuchen</button>
+        </asdf>
+    </div>
+
+    <script>
+        function show(id) {
+            document.querySelectorAll('asdf').forEach(s => s.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function check() {
+            const pwd = "753686";
+            const input = document.getElementById('code').value.trim();
+            show(input === pwd ? 'harold' : 'gameover');
+        }
+
+        function reset() {
+            location.reload();
+        }
+    </script>
+
+</body>
+
+</html>

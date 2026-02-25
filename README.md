@@ -1,3 +1,3 @@
 # Info-Schule-html
 
-[entry](bib.html)
+[entry](vorlage1243.html)

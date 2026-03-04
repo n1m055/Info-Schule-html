@@ -66,3 +66,70 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+body {
+    font-family: "Times New Roman", serif;
+    margin: 20px;
+    background-color: #111;
+    color: #ddd;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px 0;
+}
+
+h2 {
+    color: #ccc;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #ccc;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.small-image {
+    max-width: 300px;
+    border: 1px solid #ddd;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

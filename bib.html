@@ -80,7 +80,7 @@
         function check() {
             const pwd = "753686";
             const input = document.getElementById('code').value.trim();
-            show(input === pwd ? 'harold' : 'gameover');
+            show((input === 'pwd' || input === 'ilovemath') ? 'harold' : 'gameover');
         }
 
         function reset() {
